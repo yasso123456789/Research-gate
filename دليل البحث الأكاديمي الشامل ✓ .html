@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محركات البحث الأكاديمية</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #283593;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1a237e;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .description {
+      color: #555;
+      margin-top: 5px;
+    }
+    .search-filter {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input[type="text"], select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #3949ab;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1a237e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>دليلك إلى محركات البحث الأكاديمية</h1>
+    <p>صفحة تفاعلية تساعد الطلاب والباحثين في الوصول إلى المعرفة العلمية الموثوقة</p>
+    <p><strong>إعداد الأستاذ ياسر مدير مكتبة كلية الخدمة الاجتماعية بالفيوم</strong></p>
+  </header>
+
+  <section>
+    <h2>أدوات البحث والتصنيف</h2>
+    <div class="search-filter">
+      <input type="text" id="searchInput" placeholder="ابحث باسم المحرك أو الوصف...">
+      <select id="categoryFilter">
+        <option value="all">كل التخصصات</option>
+        <option value="عام">عام</option>
+        <option value="تربية">تربية</option>
+        <option value="طب وصحة">طب وصحة</option>
+        <option value="حوسبة">علوم الحاسوب</option>
+        <option value="فيزياء ورياضيات">فيزياء ورياضيات</option>
+        <option value="كتب">كتب ومكتبات</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    <h2>محركات البحث الأكاديمية</h2>
+    <ul id="engineList">
+      <li data-category="عام">
+        <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+        <div class="description">محرك بحث من جوجل يتيح الوصول إلى أبحاث علمية ومقالات أكاديمية في مختلف التخصصات.</div>
+      </li>
+      <li data-category="عام">
+        <a href="https://www.base-search.net/" target="_blank">BASE</a>
+        <div class="description">أحد أكبر محركات البحث الأكاديمية، يوفر الوصول إلى ملايين الوثائق المفتوحة.</div>
+      </li>
+      <li data-category="عام">
+        <a href="https://core.ac.uk/" target="_blank">CORE</a>
+        <div class="description">يتيح الوصول إلى ملايين الأبحاث والمقالات الأكاديمية من مؤسسات بحثية حول العالم.</div>
+      </li>
+      <li data-category="عام">
+        <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a>
+        <div class="description">محرك بحث يعتمد على الذكاء الاصطناعي لفهم المحتوى العلمي وتحسين نتائج البحث.</div>
+      </li>
+      <li data-category="تربية">
+        <a href="https://eric.ed.gov/" target="_blank">ERIC</a>
+        <div class="description">قاعدة بيانات متخصصة في الأبحاث التربوية والتعليمية.</div>
+      </li>
+      <li data-category="عام">
+        <a href="https://www.doaj.org/" target="_blank">DOAJ</a>
+        <div class="description">دليل للمجلات العلمية المفتوحة الوصول في جميع التخصصات.</div>
+      </li>
+      <li data-category="طب وصحة">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>
+        <div class="description">محرك بحث متخصص في الطب والعلوم الصحية، يشرف عليه المركز الوطني للمعلومات التقنية الحيوية.</div>
+      </li>
+      <li data-category="فيزياء ورياضيات">
+        <a href="https://arxiv.org/" target="_blank">arXiv</a>
+        <div class="description">موقع يحتوي على آلاف الأوراق البحثية في الفيزياء، الرياضيات، علوم الحاسوب والمزيد.</div>
+      </li>
+      <li data-category="حوسبة">
+        <a href="https://citeseerx.ist.psu.edu/" target="_blank">CiteSeerX</a>
+        <div class="description">محرك بحث في مجالات علوم الحاسوب والمعلوماتية.</div>
+      </li>
+      <li data-category="كتب">
+        <a href="https://www.worldcat.org/" target="_blank">WorldCat</a>
+        <div class="description">محرك بحث للمكتبات يتيح الوصول إلى الكتب والمواد الأكاديمية في مكتبات حول العالم.</div>
+      </li>
+    </ul>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const engineList = document.getElementById('engineList');
+    const items = engineList.getElementsByTagName('li');
+
+    function filterEngines() {
+      const query = searchInput.value.toLowerCase();
+      const category = categoryFilter.value;
+
+      Array.from(items).forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const itemCategory = item.getAttribute('data-category');
+
+        const matchesText = text.includes(query);
+        const matchesCategory = category === 'all' || category === itemCategory;
+
+        item.style.display = matchesText && matchesCategory ? '' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterEngines);
+    categoryFilter.addEventListener('change', filterEngines);
+
+    function downloadPDF() {
+      const element = document.body;
+      html2pdf().set({
+        margin: 1,
+        filename: 'academic_search_engines.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      }).from(element).save();
+    }
+  </script>
+</body>
+</html>
